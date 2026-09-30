@@ -1,0 +1,17 @@
+name: Reusable Node Workflow
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          echo "Running reusable Node.js workflow"
+          echo "Reusable workflow version: v1.0.0"
